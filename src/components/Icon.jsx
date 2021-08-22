@@ -1,8 +1,10 @@
 import { IconContext } from 'react-icons';
 
-const Icon = ({ icon, className }) => {
+const Icon = ({ icon, className, style }) => {
   return (
-    <IconContext.Provider value={{ className }}>{icon}</IconContext.Provider>
+    <IconContext.Provider value={{ className, style }}>
+      {icon}
+    </IconContext.Provider>
   );
 };
 
